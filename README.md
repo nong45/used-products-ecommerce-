@@ -90,6 +90,48 @@ cameroon-used-products-ecommerce/
     ├── SRS.pdf
     ├── API_Documentation.md
     └── Architecture_Diagram.png
+
+1. Authentication Routes (auth.routes.js)
+    | Method | Endpoint         | Description       |
+| ------ | ---------------- | ----------------- |
+| POST   | `/auth/register` | Register new user |
+| POST   | `/auth/login`    | Login user        |
+| GET    | `/auth/profile`  | Get user profile  |
+| PUT    | `/auth/profile`  | Update profile    |
+| POST   | `/auth/logout`   | Logout            |
+
+2. Product Routes (product.routes.js)
+   | Method | Endpoint                    | Description              |
+| ------ | --------------------------- | ------------------------ |
+| POST   | `/products`                 | Create a product listing |
+| GET    | `/products`                 | Get all products         |
+| GET    | `/products/:id`             | Get product by ID        |
+| PUT    | `/products/:id`             | Update product listing   |
+| DELETE | `/products/:id`             | Delete product           |
+| GET    | `/products/category/:catId` | Filter by category       |
+| GET    | `/products/user/:userId`    | List user’s products     |
+
+3. Messaging Routes (message.routes.js)
+   | Method | Endpoint               | Description          |
+| ------ | ---------------------- | -------------------- |
+| POST   | `/messages`            | Send message         |
+| GET    | `/messages/:userId`    | Show user's messages |
+| GET    | `/messages/thread/:id` | Conversation thread  |
+4. Category Routes (category.routes.js)
+   | Method | Endpoint      | Description          |
+| ------ | ------------- | -------------------- |
+| POST   | `/categories` | Create category      |
+| GET    | `/categories` | Fetch all categories |
+5. Admin Routes (admin.routes.js)
+   | Method | Endpoint                    | Description         |
+| ------ | --------------------------- | ------------------- |
+| GET    | `/admin/users`              | Get all users       |
+| GET    | `/admin/products`           | Get all products    |
+| PUT    | `/admin/block-user/:id`     | Block user          |
+| DELETE | `/admin/remove-product/:id` | Remove product      |
+| GET    | `/admin/stats`              | Platform statistics |
+
+
     
 #INSTALLATION GUIDE
 
